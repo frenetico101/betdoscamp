@@ -7,14 +7,24 @@ import {
   BarElement,
   PointElement,
   LineElement,
+  ArcElement,
   Tooltip,
   Legend,
 } from 'chart.js';
 import { Bar, Line, Pie } from 'react-chartjs-2';
 import { format, parseISO } from 'date-fns';
 
-// Registro de componentes do Chart.js para tree-shaking eficiente【599463627541566†L607-L623】.
-ChartJS.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement, Tooltip, Legend);
+// Registro de componentes do Chart.js para tree‑shaking eficiente【599463627541566†L607-L623】.
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  PointElement,
+  LineElement,
+  ArcElement, // necessário para gráficos de pizza
+  Tooltip,
+  Legend
+);
 
 export default function Charts() {
   const { dailyProfit, bets } = useBetContext();

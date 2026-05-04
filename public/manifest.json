@@ -1,0 +1,8 @@
+{
+  "short_name": "BET Campeões",
+  "name": "BET dos Campeões",
+  "display": "standalone",
+  "start_url": "/",
+  "background_color": "#07111f",
+  "theme_color": "#07111f"
+}
